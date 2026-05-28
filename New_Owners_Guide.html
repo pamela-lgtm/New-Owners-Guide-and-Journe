@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Owner's Guide | Verandah Properties</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Jost:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --teal: #008C82;
+    --teal-dark: #006661;
+    --teal-light: #4DAEA7;
+    --gold: #D4AF50;
+    --gold-light: #E8D094;
+    --gold-pale: #F7EFD9;
+    --ink: #1a1a1a;
+    --body: #2a2a2a;
+    --muted: #6B6B6B;
+    --light-muted: #9A9A9A;
+    --border: #E8E5DD;
+    --bg-warm: #FAF7F0;
+    --bg-cream: #FDFCF7;
+    --bg-cool: #F5F8F8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Jost', 'DM Sans', sans-serif;
+    color: var(--body);
+    line-height: 1.65;
+    font-size: 16px;
+    background: var(--bg-cream);
+    font-weight: 400;
+}
+.serif { font-family: 'Cormorant Garamond', 'Playfair Display', serif; }
+.display { font-family: 'Playfair Display', serif; }
+.container { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+.container-wide { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== HEADER ===== */
+.report-header {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    padding: 56px 0 72px 0;
+    border-bottom: 5px solid var(--gold);
+    text-align: center;
+}
+.report-header .brand-line {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.report-header .locale {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 36px;
+}
+.report-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+.report-header h1 em { font-style: italic; color: var(--gold-light); font-weight: 600; }
+.report-header .h1-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+}
+.report-header .opening-line {
+    max-width: 660px;
+    margin: 24px auto 0 auto;
+    font-size: 17px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.7;
+}
+
+/* ===== WELCOME CALLOUT (replaces Lake Nona Exclusive callout) ===== */
+.welcome-bar {
+    background: linear-gradient(135deg, var(--gold-pale) 0%, #FBF6E5 100%);
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 22px 0;
+    text-align: center;
+}
+.welcome-bar .welcome-content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    color: var(--body);
+    line-height: 1.6;
+}
+.welcome-bar .welcome-content strong {
+    color: var(--teal-dark);
+    font-weight: 600;
+}
+.welcome-bar .star {
+    color: var(--gold);
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* ===== SHORT VERSION ===== */
+.short-version {
+    padding: 64px 0;
+    background: var(--bg-cream);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.short-version h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.short-version p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.55;
+    color: var(--body);
+    max-width: 820px;
+    margin: 0 auto 36px auto;
+    font-weight: 400;
+}
+.short-version p strong { color: var(--teal-dark); font-weight: 600; }
+
+.fee-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+.fee-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--teal);
+    padding: 24px 18px;
+    border-radius: 4px;
+}
+.fee-card.gold { border-top-color: var(--gold); }
+.fee-card .label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.fee-card .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.fee-card.gold .amount { color: var(--gold); }
+.fee-card .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.cta-block {
+    margin-top: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--body);
+    font-style: italic;
+}
+.cta-block a {
+    color: var(--teal-dark);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 1px;
+    font-style: normal;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.cta-block a:hover { text-decoration: none; color: var(--teal); }
+
+/* ===== NAV ===== */
+.stage-nav {
+    background: var(--teal-dark);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.stage-nav .nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.stage-nav a {
+    color: rgba(255,255,255,0.85);
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.stage-nav a:hover { background: rgba(255,255,255,0.12); color: white; text-decoration: none; }
+.stage-nav a .num {
+    background: var(--gold);
+    color: var(--teal-dark);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+.nav-hint {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 16px 0;
+    background: var(--bg-warm);
+    border-bottom: 1px solid var(--border);
+}
+
+/* ===== STAGE SECTIONS ===== */
+.stage-section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
+}
+.stage-section:nth-child(even) { background: var(--bg-warm); }
+.stage-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.stage-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--ink);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+.stage-section h2 em { font-style: italic; color: var(--teal); font-weight: 600; }
+.stage-section .stage-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--body);
+    margin-bottom: 40px;
+    max-width: 780px;
+    font-weight: 400;
+}
+
+/* Numbered steps */
+.numbered-steps { margin: 32px 0; }
+.num-step {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+.num-step:last-child { border-bottom: none; }
+.num-step .step-num {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: var(--teal);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+.num-step .step-body { flex: 1; }
+.num-step .step-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.num-step .step-body p { color: var(--body); font-size: 15.5px; line-height: 1.7; }
+
+/* FAQ accordions */
+details.faq {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 12px 0;
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+details.faq[open] { box-shadow: 0 4px 16px rgba(0,0,0,0.04); border-color: var(--teal-light); }
+details.faq summary {
+    padding: 18px 24px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--ink);
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary .tag {
+    background: var(--gold-pale);
+    color: var(--gold);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+details.faq summary .q-text { flex: 1; }
+details.faq summary .plus {
+    color: var(--teal);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+details.faq[open] summary .plus { transform: rotate(45deg); }
+details.faq .faq-body {
+    padding: 4px 24px 24px 24px;
+    color: var(--body);
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+details.faq .faq-body p { margin-bottom: 12px; }
+details.faq .faq-body ul { margin: 12px 0 12px 22px; }
+details.faq .faq-body li { padding: 4px 0; }
+details.faq .faq-body strong { color: var(--teal-dark); font-weight: 600; }
+details.faq .faq-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14.5px;
+}
+details.faq .faq-body th {
+    background: var(--bg-cool);
+    text-align: left;
+    padding: 12px;
+    border: 1px solid var(--border);
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+details.faq .faq-body td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+}
+
+/* Pamela quote */
+.pamela-quote {
+    background: white;
+    border-left: 4px solid var(--gold);
+    padding: 28px 32px;
+    margin: 32px 0;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.pamela-quote .attribution {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+.pamela-quote blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.6;
+    color: var(--body);
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Team cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 32px 0;
+}
+.team-card {
+    background: white;
+    padding: 28px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 20px;
+}
+.team-card .avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+.team-card .team-body h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+.team-card .team-body .role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+.team-card .team-body p { font-size: 14.5px; line-height: 1.65; color: var(--body); }
+
+/* SureVestor coverage grid */
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+}
+.coverage-card {
+    background: var(--bg-cool);
+    padding: 20px 18px;
+    border-radius: 6px;
+    border-left: 3px solid var(--teal);
+    text-align: center;
+}
+.coverage-card.gold { border-left-color: var(--gold); }
+.coverage-card .big {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+.coverage-card.gold .big { color: var(--gold); }
+.coverage-card .label {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+.coverage-card .detail {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+/* Marquee bullet section */
+.everything-included {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 100%);
+    color: white;
+    padding: 80px 0;
+    border-bottom: 5px solid var(--gold);
+}
+.everything-included .icon-mark {
+    text-align: center;
+    font-size: 32px;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+}
+.everything-included h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+.everything-included .lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.55;
+}
+.everything-included ul {
+    list-style: none;
+    columns: 2;
+    column-gap: 40px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.everything-included li {
+    padding: 9px 0 9px 24px;
+    position: relative;
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.55;
+    break-inside: avoid;
+}
+.everything-included li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold-light);
+    font-size: 14px;
+    top: 9px;
+}
+.everything-included li strong { color: white; font-weight: 600; }
+
+/* Calculator section */
+.calc-section {
+    padding: 80px 0;
+    background: var(--bg-warm);
+    border-bottom: 1px solid var(--border);
+}
+.calc-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.calc-section h2 em { font-style: italic; color: var(--teal); }
+.calc-section .lead {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    font-style: italic;
+}
+.calculator {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 36px;
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.calculator h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+.calc-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    margin-bottom: 18px;
+    align-items: center;
+}
+.calc-input { display: flex; flex-direction: column; }
+.calc-input label {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.calc-input input {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--bg-cream);
+}
+.calc-input input:focus { outline: 2px solid var(--teal); border-color: var(--teal); }
+.calc-result { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dotted var(--border); font-size: 14.5px; }
+.calc-result.bold { font-weight: 600; }
+.calc-result .label { color: var(--muted); }
+.calc-result .value { font-family: 'Playfair Display', serif; color: var(--ink); font-weight: 600; }
+.calc-result.headline {
+    background: var(--bg-cool);
+    padding: 16px 18px;
+    border-radius: 4px;
+    border-bottom: none;
+    margin-top: 14px;
+}
+.calc-result.headline .label { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--ink); font-style: italic; }
+.calc-result.headline .value { font-size: 26px; color: var(--teal-dark); }
+.calc-disclaimer {
+    margin-top: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+    text-align: center;
+    padding: 0 12px;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 80px 0;
+    background: var(--bg-cream);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.final-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--ink);
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.15;
+}
+.final-cta h2 em { font-style: italic; color: var(--teal); }
+.final-cta p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--body);
+    max-width: 680px;
+    margin: 0 auto 36px auto;
+    line-height: 1.55;
+}
+.final-cta a.cta-button {
+    display: inline-block;
+    background: var(--teal-dark);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+.final-cta a.cta-button:hover { background: var(--teal); text-decoration: none; }
+
+/* Footer */
+.report-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.85);
+    padding: 48px 0 36px 0;
+    text-align: center;
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+.report-footer .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.report-footer a { color: var(--gold-light); }
+.report-footer .disclaimer {
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13.5px;
+    margin-top: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+    .report-header h1 { font-size: 36px; }
+    .report-header .h1-tag { font-size: 18px; }
+    .short-version p { font-size: 19px; }
+    .fee-cards { grid-template-columns: repeat(2, 1fr); }
+    .fee-card .amount { font-size: 32px; }
+    .stage-section h2 { font-size: 30px; }
+    .stage-section .stage-intro { font-size: 18px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .coverage-grid { grid-template-columns: 1fr; }
+    .everything-included ul { columns: 1; }
+    .calc-row { grid-template-columns: 1fr; }
+    .stage-nav .nav-inner { gap: 4px; }
+    .stage-nav a { font-size: 11.5px; padding: 4px 8px; }
+    details.faq summary { flex-wrap: wrap; gap: 10px; padding: 16px 18px; }
+    details.faq .faq-body { padding: 4px 18px 20px 18px; }
+    .calc-section h2, .final-cta h2 { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+
+<header class="report-header">
+    <div class="container">
+        <div class="brand-line">Verandah Properties, LLC</div>
+        <div class="locale">Lake Nona · Greater Orlando</div>
+        <div class="h1-tag">New Owner's Guide</div>
+        <h1>From first conversation<br>to <em>fully managed.</em></h1>
+        <p class="opening-line">If you've been thinking about renting your home, you probably have questions — and the most important ones are often the ones you don't know to ask yet. This walks you through every stage of working with us, in plain language, so nothing catches you off guard.</p>
+    </div>
+</header>
+
+<div class="welcome-bar">
+    <div class="welcome-content">
+        <span class="star">✦</span><strong>Welcome to Verandah Properties.</strong> This guide is designed to give you a complete, transparent picture of what working with us looks like — from your first call through years of successful management. Our standard monthly management fee of <strong>8%</strong> is reflected throughout. If your property is located within our select managed corridor, your specific rate will be confirmed during onboarding.
+    </div>
+</div>
+
+<section class="short-version">
+    <div class="container">
+        <h2>The Short Version</h2>
+        <p>We place well-qualified tenants, manage your property completely, and handle everything that comes up — <strong>so you don't have to.</strong> Our fee is <strong>8% of rent collected monthly</strong>, plus a one-time leasing fee of <strong>50% of first month's rent</strong> when we place your tenant. You get a dedicated point of contact, a 24/7 owner portal, full financial transparency, and — included free your first year — comprehensive Landlord Shield protection covering accidental and malicious damage, lost rent, eviction costs, and $1M in liability.</p>
+
+        <div class="fee-cards">
+            <div class="fee-card">
+                <div class="label">Monthly Fee</div>
+                <div class="amount">8%</div>
+                <div class="sub">of rent collected</div>
+            </div>
+            <div class="fee-card">
+                <div class="label">Leasing Fee (once)</div>
+                <div class="amount">50%</div>
+                <div class="sub">first month, one time per tenancy</div>
+            </div>
+            <div class="fee-card">
+                <div class="label">Renewal Fee</div>
+                <div class="amount">$200</div>
+                <div class="sub">flat — when your tenant renews</div>
+            </div>
+            <div class="fee-card gold">
+                <div class="label">Protection (Year 1)</div>
+                <div class="amount">Free</div>
+                <div class="sub">Landlord Shield included</div>
+            </div>
+        </div>
+
+        <div class="cta-block">
+            Ready to talk? <a href="tel:4074155478">Call or text Pamela at (407) 415-5478</a> — or keep reading for the full picture.
+        </div>
+    </div>
+</section>
+
+<nav class="stage-nav">
+    <div class="nav-inner">
+        <a href="#s1"><span class="num">1</span>We're a fit</a>
+        <a href="#s2"><span class="num">2</span>Prepare &amp; onboard</a>
+        <a href="#s3"><span class="num">3</span>Market &amp; show</a>
+        <a href="#s4"><span class="num">4</span>Screen &amp; place</a>
+        <a href="#s5"><span class="num">5</span>Active management</a>
+        <a href="#s6"><span class="num">6</span>Maintenance</a>
+        <a href="#s7"><span class="num">7</span>Renewal &amp; beyond</a>
+    </div>
+</nav>
+<div class="nav-hint">Click any stage to jump ahead — or simply scroll.</div>
+
+<!-- STAGE 1 -->
+<section class="stage-section" id="s1">
+    <div class="container">
+        <div class="stage-label">Stage 1</div>
+        <h2>We've decided we're <em>a good fit.</em> Now what?</h2>
+        <p class="stage-intro">We know this is a big step — handing over the keys to something you've invested in takes real trust. We don't take that lightly. Getting started with Verandah is designed to feel easy, not overwhelming, from the very first moment.</p>
+
+        <div class="numbered-steps">
+            <div class="num-step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                    <h4>Send us a video walkthrough — or photos</h4>
+                    <p>Before anything else, we want to get an initial sense of the property. A short video walkthrough on your phone or current photos is a great starting point — it gives us everything we need to begin the conversation and make preliminary recommendations. Please note this is a preliminary step only. Our New Client Liaison will schedule a formal on-site walk-through once the property is confirmed show-ready and we are ready to move forward together.</p>
+                </div>
+            </div>
+            <div class="num-step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                    <h4>We review and come back to you with a clear, honest picture</h4>
+                    <p>We'll look at what you've sent and come back to you with specific, practical feedback — what's already in great shape, what could use attention, and exactly how our vendors can help get you there quickly. We know this can feel like a lot of unknowns right now. Our job is to replace that uncertainty with a clear, manageable plan — and to make sure you feel supported every step of the way.</p>
+                </div>
+            </div>
+            <div class="num-step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                    <h4>Documents arrive in small, manageable pieces</h4>
+                    <p>We need quite a bit of information from you — property details, HOA rules, utilities, insurance, amenities, and everything that makes your property uniquely marketable. Rather than pile it all on at once, we send it in stages as we need it. The more complete your information, the better equipped we are to market your property properly, prepare a fully covered lease, and manage your account without dropped balls or back-and-forth down the road.</p>
+                </div>
+            </div>
+            <div class="num-step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                    <h4>Your New Client Liaison — your one dedicated contact</h4>
+                    <p>From the moment you're onboarded through your entire first leasing cycle, you have one person assigned to you — and that's who you'll hear from. No bouncing around between team members, no confusion about who to call. Your liaison is your direct line into Verandah. They'll keep you updated on showing activity, applicant feedback, and if any pricing adjustments are needed to reduce vacancy. If they don't have an answer, they know exactly who on our team does, and they'll get it back to you. You're never left wondering what's happening with your property.</p>
+                </div>
+            </div>
+        </div>
+
+        <details class="faq">
+            <summary><span class="tag">Fees</span><span class="q-text">What does it cost to work with Verandah?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Three fees make up the standard cost of working with us. That's it.</p>
+                <table>
+                    <thead><tr><th>Fee</th><th>Amount</th><th>When it applies</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Monthly management fee</strong></td><td>8% of rent</td><td>Each month rent comes in. At $2,200/mo, that's $176.</td></tr>
+                        <tr><td><strong>Leasing fee</strong></td><td>50% first month</td><td>Once, when your new tenant's lease is signed. At $2,200/mo, that's $1,100 — one time per tenancy.</td></tr>
+                        <tr><td><strong>Lease renewal fee</strong></td><td>$200 flat</td><td>When your existing tenant renews. No new leasing fee — just $200.</td></tr>
+                    </tbody>
+                </table>
+                <p>The marketing fee is <strong>waived for your entire first year.</strong> After that, a $100 fee applies per future tenant placement.</p>
+                <p>We only charge the monthly management fee when rent is collected. If your property is vacant, there's no management fee for that month. Our incentive is the same as yours — get it rented quickly to a qualified resident.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Fees</span><span class="q-text">Are there any fees outside the standard three?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>A handful of situational fees exist — they're rare, and we want you to know about them upfront so there are never any surprises.</p>
+                <ul>
+                    <li><strong>Tenant takeover fee — $250:</strong> Only if a tenant is already in place when we assume management. Covers the administrative setup of bringing them into our system.</li>
+                    <li><strong>Transition fee — $500:</strong> Only if, after a full year, you choose to move to self-management or a different company. Covers the handoff of all records, accounting, keys, and communications.</li>
+                    <li><strong>Eviction-related costs:</strong> In the unlikely event of an eviction, legal costs are the owner's responsibility — however, these are largely covered under your Landlord Shield protection (included free Year 1).</li>
+                    <li><strong>Early cancellation (within 90 days):</strong> If you cancel in the first 90 days, we ask for reimbursement of any actual costs we've already incurred — specifically professional photography and any third-party inspection. Invoices provided at cost.</li>
+                </ul>
+                <p>That's the full picture. No hidden charges, no surprise line items on your monthly statement.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Setup</span><span class="q-text">What is the $500 owner reserve and why is it required?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Before we market your property, we require a <strong>$500 operating reserve</strong> held in our trust account. This is not a fee — it's your money, set aside specifically for your property.</p>
+                <p>It exists so that when a routine repair comes up — a broken garbage disposal, a clogged drain, a smoke detector — we can handle it immediately without a wire transfer delay from you. Timing matters in property management, and your tenant's experience matters.</p>
+                <p>If the reserve is used, it's replenished from the next month's rent before your disbursement is sent. You'll see every penny accounted for on your monthly statement.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 2 -->
+<section class="stage-section" id="s2">
+    <div class="container">
+        <div class="stage-label">Stage 2</div>
+        <h2>Getting your property <em>show-ready.</em></h2>
+        <p class="stage-intro">This is often the stage new owners feel most uncertain about — and we get that. What needs to be done? How much will it cost? Who handles it? We walk you through all of it. You'll never be handed a list and left to figure it out alone. Our vendors become your vendors, and we're right beside you through this whole transition.</p>
+
+        <details class="faq">
+            <summary><span class="tag">Prep</span><span class="q-text">What does "show-ready" actually mean?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Show-ready means a potential renter can look at your property and genuinely picture moving in that day. It's not about perfection — it's about communicating care and standards.</p>
+                <p><strong>Interior:</strong> Deep clean throughout, fresh neutral paint, all appliances clean and functioning, updated light and plumbing fixtures (within the last 5 years), carpet professionally cleaned or replaced, hard floors clean with no excessive wear.</p>
+                <p><strong>Exterior:</strong> Lawn mowed, trimmed, and edged; irrigation on automatic; fresh mulch in beds; no weeds; power-washed if needed (in Florida, this is typically every year or two); pool clean and blue.</p>
+                <p>We provide you with our full "Rent Ready" checklist during onboarding — and we're here to guide you through it. This is not meant to overwhelm; it's meant to protect your investment from day one.</p>
+                <p>You can rent a property that's not quite move-in ready. But we can assure you it won't be to a highly qualified tenant. The quality of what you present communicates what you expect in return.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Prep</span><span class="q-text">Do I have to find my own contractors to get it ready?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Not at all — and we wouldn't want you to feel like you have to figure that out on your own. We make our vetted vendor network available to you directly — cleaners, painters, flooring professionals, landscapers, handymen. These are people we've worked with for years and genuinely trust with the properties we manage.</p>
+                <p>There's something else we love about this part: meeting our vendors during the make-ready process gives you an early, real look at our extended team. By the time your property goes live, you won't just be trusting Verandah — you'll know some of the people caring for your property alongside us. That kind of transparency matters to us, and we think it'll matter to you too.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Insurance</span><span class="q-text">What happens to my homeowner's insurance when I rent?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>This is one of the most important things to handle before your property goes live. Your standard homeowner's policy typically does not cover a rental situation — you'll need to convert it to a <strong>landlord policy</strong> (sometimes called a dwelling fire policy).</p>
+                <p>You'll also be required to add <strong>Verandah Properties as an additional insured</strong> on your policy. Minimum coverage required: $100,000 per person / $300,000 per occurrence in public liability.</p>
+                <p>Here's some good news: during your first year, our <strong>Landlord Shield coverage</strong> (more on that below) fulfills the additional insured requirement — so you have a grace period to get your policy properly updated without being out of compliance from day one.</p>
+                <p>We also mandate that your tenants carry a minimum of <strong>$100,000 in liability insurance</strong> covering damage to the property such as fire or flooding. We strongly encourage them to carry renters insurance for their personal belongings as well, though that protects them — not the property.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Protection</span><span class="q-text">What is Landlord Shield — and what does it actually cover?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Every Verandah-managed property is automatically enrolled in our <strong>Landlord Shield coverage (SureVestor Protection Plus Bundle)</strong> — at no cost to you for the first full year. This is one of the most meaningful protections we offer, and it kicks in from day one.</p>
+                <div class="coverage-grid">
+                    <div class="coverage-card"><div class="big">$100,000</div><div class="label">Accidental Tenant Damage</div><div class="detail">Fire, smoke, or water damage caused accidentally — no deductible.</div></div>
+                    <div class="coverage-card"><div class="big">$35,000</div><div class="label">Malicious Tenant Damage</div><div class="detail">Deliberate damage. Plus $15,000 for theft or damage caused by theft.</div></div>
+                    <div class="coverage-card"><div class="big">25 weeks</div><div class="label">Lost Rent Coverage</div><div class="detail">If a tenant stops paying and eviction begins.</div></div>
+                    <div class="coverage-card"><div class="big">$5,000</div><div class="label">Eviction Costs</div><div class="detail">Plus $600 for sheriff fees and rekeying locks.</div></div>
+                    <div class="coverage-card"><div class="big">$1,000,000</div><div class="label">Liability Protection</div><div class="detail">Third-party claims — no deductible. Fulfills additional insured requirement Year 1.</div></div>
+                    <div class="coverage-card gold"><div class="big">Year 1</div><div class="label">Included Free</div><div class="detail">Continue for $55/month or $600/year after Year 1. Most owners keep it.</div></div>
+                </div>
+                <p style="margin-top: 16px;"><em>Maximum rental limit: $3,000/month. You cannot purchase SureVestor coverage independently — it is exclusive to Verandah-managed properties.</em></p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 3 -->
+<section class="stage-section" id="s3">
+    <div class="container">
+        <div class="stage-label">Stage 3</div>
+        <h2>Marketing your property <em>the right way.</em></h2>
+        <p class="stage-intro">Once your property is ready, we take over completely. You don't need to manage showings, field calls, or wonder if anyone's looking. We handle all of it — and we keep you informed every step of the way so you always know where things stand.</p>
+
+        <details class="faq">
+            <summary><span class="tag">Marketing</span><span class="q-text">Why don't you list the property until it's fully ready?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>This is a deliberate philosophy — and one that protects you. Today's renters are doing their research entirely online before ever setting foot in a property. The moment a listing goes live, the clock starts ticking on Zillow.</p>
+                <p>A property that sits on Zillow for 30+ days sends a signal: something's wrong. Even if the reason is simply that the property wasn't ready at listing, the damage to first impressions is real. Highly qualified renters move quickly and pass on anything that looks like it's been sitting.</p>
+                <p>We also <strong>do not show occupied properties.</strong> A well-qualified renter wants to see exactly what they're moving into — not someone else's furniture, not a home in mid-transition. We show properties that are vacant, clean, and ready. That's what attracts the tenant you want.</p>
+                <p>We start the Zillow marketing clock when the property is ready — not before. This is one of the most important decisions in the leasing process and it's one most owners don't think about until it's too late.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Marketing</span><span class="q-text">Where exactly is my property marketed?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Across all of the channels that matter — and a few that most property managers can't offer:</p>
+                <ul>
+                    <li><strong>MLS (Multiple Listing Service):</strong> Verandah is a licensed Realtor and an active member of the MLS — which means your property is exposed to every Realtor and agent in the area. If they bring a qualified tenant who signs a lease, we pay them from our management fees — nothing additional from you.</li>
+                    <li><strong>Zillow with virtual tour and floor plan:</strong> Our professional photographer produces a full virtual walkthrough and floor plan — features Zillow actively promotes, putting your listing ahead of the competition.</li>
+                    <li><strong>Our website:</strong> Verandah specializes in Lake Nona and the Greater Orlando area — your property is featured within our market identity.</li>
+                    <li><strong>All major rental platforms:</strong> Realtor.com, Apartments.com, Rent.com, and all other high-traffic rental sites.</li>
+                    <li><strong>Social media:</strong> Instagram and Facebook — properties promoted to our audience and beyond.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Showings</span><span class="q-text">How are showings handled — do I need to be available?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Not at all — and this is actually what modern renters want. Today's qualified prospects expect to tour on their own schedule, not wait for an appointment. We make that possible.</p>
+                <p>Once your property is show-ready, we install a <strong>Rently Smart Lockbox</strong> on the property. Qualified prospects can tour at any time that works for them, with no scheduling required from you.</p>
+                <p>Rently is far more than a lockbox. Before anyone can access it, they must verify their identity through a rigorous process — credit card verification, government ID, and a selfie taken at the property that must match their ID on file. We receive an instant notification every time a showing occurs. In years of using this system, we have not had issues.</p>
+                <p>All inquiries during business hours are handled by our live team. After hours, your New Client Liaison handles incoming questions to make sure no qualified prospect goes unanswered.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 4 -->
+<section class="stage-section" id="s4">
+    <div class="container">
+        <div class="stage-label">Stage 4</div>
+        <h2>Finding the right resident — <em>not just any resident.</em></h2>
+        <p class="stage-intro">For most new owners, this is the part they worry about most — "what if we get the wrong person?" It's a fair concern. The tenant we place determines so much of your experience. This is where our 20+ years of pattern recognition and our multi-layer process do their most important work. You can breathe here. We've got it.</p>
+
+        <div class="pamela-quote">
+            <div class="attribution">From Pamela Syvertson — Owner &amp; Broker</div>
+            <blockquote>"After 20+ years in this business, here's what I've learned actually matters: Credit is the number one indicator. How someone manages their credit — their payment history, their obligations, how they've handled financial commitments over time — tells you a great deal about how they conduct themselves across the board. It's not just a score. It's a window into someone's character and accountability."</blockquote>
+        </div>
+
+        <details class="faq">
+            <summary><span class="tag">Screening</span><span class="q-text">How do you screen applicants?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Every applicant is evaluated across multiple layers — and every layer has to hold up. We are not a pass/fail checklist. We're looking at the full picture of who this person is.</p>
+                <ul>
+                    <li><strong>Credit and financial history:</strong> The most reliable indicator. We review payment history, outstanding obligations, and overall credit profile — not just a score. We also look at <strong>mortgage history</strong>, which shows up on the credit report and tells us how someone handles their most significant financial commitment.</li>
+                    <li><strong>Income verification:</strong> Gross monthly income of at least 2.5–3x the monthly rent, verified through pay stubs, tax returns, or bank statements. We verify the documents — we don't just take them at face value.</li>
+                    <li><strong>Rental history:</strong> We contact previous landlords directly. How they maintained the property, whether they paid on time, how they communicated, how they left it.</li>
+                    <li><strong>Document authenticity:</strong> We are trained to identify institutional fraud — including fabricated pay stubs, altered bank statements, and forged ID documents, which have become increasingly sophisticated. Fraudulent applications are caught and rejected.</li>
+                    <li><strong>Social media and public record research:</strong> We've learned over 20+ years that a quick look at how someone presents themselves publicly adds meaningful context. We use every reasonable tool available to us to understand who we're placing in your home.</li>
+                    <li><strong>Application behavior:</strong> How quickly someone responds, how they communicate, whether they ask thoughtful questions. These signals have flagged problems more times than we can count — and we pay attention to them.</li>
+                </ul>
+                <p>We continue to add to our screening process as the landscape evolves. Only applicants who meet every standard we set are approved. Every single time.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Screening</span><span class="q-text">What's the deal with Experian reporting — and why does it matter?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Every month, we report your tenant's payment directly to Experian — on time or late. Our residents know this from day one.</p>
+                <p>This is a powerful lever. For tenants who care about their credit (and our screening ensures they do), on-time rent payment is a direct investment in their financial profile. It keeps accountability front and center throughout the tenancy — not just at move-in.</p>
+                <p>It also means our well-qualified residents have real motivation beyond just avoiding late fees. Their credit score is on the line every single month. That changes behavior in the best possible way.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Screening</span><span class="q-text">What about pets?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Our listings note that "pets will be considered." This is a deliberate policy — refusing all pets eliminates more than 50% of qualified renters immediately. The well-qualified tenants we work to place are responsible people who will not allow an animal to damage a home they value.</p>
+                <p>Every pet applicant goes through our professional pet screening service — it's part of the formal application process. Aggressive breeds are not permitted. Approved pets are documented; any unauthorized additions are a lease violation.</p>
+                <p>ESAs and service animals are processed through a verifiable application to ensure legal compliance.</p>
+                <p>Additionally, your property is enrolled in our <strong>Animal Protection Guarantee</strong> — up to $1,500 in pet-related damage coverage beyond the security deposit, included at no charge.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Lease</span><span class="q-text">What happens once we find the right tenant?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>We handle everything: lease preparation, execution, security deposit collection, and a full move-in inspection — documented with photos and stored directly in your owner portal. Everything is yours.</p>
+                <p>One important note about our lease: <strong>there is no clause allowing tenants to break it.</strong> Your resident is fully responsible for rent and all lease obligations until they are replaced by a well-qualified tenant. This is one of the most important protections in good property management — and it's by design.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 5 -->
+<section class="stage-section" id="s5">
+    <div class="container">
+        <div class="stage-label">Stage 5</div>
+        <h2>Once your tenant is in — <em>we take it from here.</em></h2>
+        <p class="stage-intro">This is where the relationship really begins. Your tenant is in, your property is generating income — and you have a real, dedicated team looking after it. People you can actually reach. People who know your property and care about getting things right. Here's who you'll be working with.</p>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">M</div>
+                <div class="team-body">
+                    <h4>Megan Fairchild</h4>
+                    <div class="role">Director of Maintenance &amp; Client Experience</div>
+                    <p>Your main point of contact once the property is leased. Megan has been in single-family property management since graduating college — including time as a regional director with a large institutional landlord. She came back to boutique-style management because she loves doing it right. She goes the extra mile, every time. She is available by phone to discuss your account at any time.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="avatar">L</div>
+                <div class="team-body">
+                    <h4>Luz Reyes</h4>
+                    <div class="role">Client Experience Manager</div>
+                    <p>Your dedicated bilingual Client Experience Manager. Luz ensures both owners and tenants have everything they need — HOA rules, maintenance coordination, lease enforcement, HOA notifications — all handled with professionalism and genuine care. She is professionally firm on compliance and genuinely servant-minded when it comes to the experience of everyone involved.</p>
+                </div>
+            </div>
+        </div>
+
+        <details class="faq">
+            <summary><span class="tag">Portal</span><span class="q-text">What can I see and do in my owner portal?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Think of your owner portal as your window into everything — available 24/7 from your phone or computer. It's designed to give you confidence and clarity without having to chase anyone down for answers.</p>
+                <ul>
+                    <li>View incoming ACH deposits and payment history</li>
+                    <li>Download monthly owner statements — every line item visible</li>
+                    <li>View vendor invoices and maintenance history</li>
+                    <li>Make owner contributions when needed</li>
+                    <li>Access your inspection reports and all property documents</li>
+                    <li>Download your annual 1099 for tax purposes</li>
+                </ul>
+                <p>Your New Client Liaison will personally walk you through the portal during onboarding — sitting with you, so to speak, until you're completely comfortable. You'll never be handed a login link and left to figure it out.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">HOA</span><span class="q-text">What happens if my HOA sends a violation?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>We handle all HOA violations — whether they're tenant-caused or owner-responsibility — from start to close. Fully documented, every time.</p>
+                <p>For tenant-caused violations, we use lease-based leverage to manage and deter repeat behavior. HOAs have the ability to impose fines, and we take compliance seriously. Our process ensures violations are addressed promptly so they don't escalate.</p>
+                <p>All HOA fees and assessments remain the owner's financial responsibility. We monitor, manage, and close out violations — you cover the underlying HOA obligations.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Finance</span><span class="q-text">When do I get paid — and what's deducted first?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Our accounting is overseen by a CPA — and owner disbursements go out on the <strong>8th of every month</strong> (or the next business day if the 8th falls on a weekend when our administrative office is closed). By the 8th, on-time tenant payments have cleared and your proceeds are ready.</p>
+                <p>Disbursements happen in this order: our management fees → any repair or vendor invoices → reserve replenishment → remaining balance to you. Everything is itemized on your monthly statement. Nothing is hidden, nothing is rounded up.</p>
+                <p>One more thing worth knowing: we maintain <strong>after-hours emergency maintenance dispatch</strong> for your residents. If something urgent happens at 10pm, your tenant has a way to reach us. Your investment and your tenant are covered around the clock.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Contact</span><span class="q-text">Why can't I contact my tenant directly?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>We know this can feel counterintuitive — it's your property, after all. But this boundary is one of the most important ways we protect you, and once you understand why, it makes complete sense.</p>
+                <p>If you contact your tenant directly and a dispute later arises — about anything — those communications can become evidence in a legal proceeding. The moment you're in the chain of communication, you're also in the chain of liability. That's a risk we want to keep entirely off your plate.</p>
+                <p>Practically speaking, direct owner contact also makes it harder for us to enforce the lease on your behalf. If a tenant knows they can reach you directly, our ability to hold them accountable becomes much more difficult — and that ultimately hurts you.</p>
+                <p>Think of it the way you'd lean on an attorney to handle communication in a legal matter rather than calling the other party yourself. It's not distrust — it's smart protection. You have a whole team to handle this. Let us do our job for you.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 6 -->
+<section class="stage-section" id="s6">
+    <div class="container">
+        <div class="stage-label">Stage 6</div>
+        <h2>We don't just <em>open work orders.</em></h2>
+        <p class="stage-intro">Maintenance is the part of owning a rental that keeps most people up at night. What happens when something breaks? Who decides what gets fixed? Who pays for it? We want to put your mind at ease — because this is something we've thought through deeply, and our process is built to protect both your investment and your peace of mind.</p>
+
+        <div class="numbered-steps">
+            <div class="num-step"><div class="step-num">1</div><div class="step-body"><h4>Every request is analyzed before anything happens</h4><p>Is it urgent? A liability risk? Actually the tenant's responsibility? We answer these questions first — every single time.</p></div></div>
+            <div class="num-step"><div class="step-num">2</div><div class="step-body"><h4>Urgent issues get smart, immediate response</h4><p>A broken A/C in a Florida summer is a priority — no debate. But before we dispatch, we walk your tenant through a full troubleshooting protocol. Many issues resolve within the hour without a single vendor fee. If troubleshooting doesn't resolve it, dispatch is immediate.</p></div></div>
+            <div class="num-step"><div class="step-num">3</div><div class="step-body"><h4>Safety or property damage risk? We act without delay</h4><p>Flooding, structural concerns, hazards — we move fast. For flooding, we guide tenants through shutting off the water supply in real time while coordinating vendor response simultaneously.</p></div></div>
+            <div class="num-step"><div class="step-num">4</div><div class="step-body"><h4>Tenant's responsibility? We handle the message</h4><p>If the issue is lease-defined tenant responsibility, we communicate it clearly and close the request. Your relationship with the tenant stays intact — we absorb the friction so you don't have to.</p></div></div>
+            <div class="num-step"><div class="step-num">5</div><div class="step-body"><h4>Small items get logged and batched — not ignored</h4><p>For minor issues where mobilizing a vendor doesn't make financial sense, we document it and consolidate it into a future, more substantial work order. Nothing falls through the cracks — we're just deliberate with your money.</p></div></div>
+            <div class="num-step"><div class="step-num">6</div><div class="step-body"><h4>Legitimate owner repairs are scheduled promptly</h4><p>When an issue is owner responsibility, we coordinate with our vetted vendor network and handle it. Your tenant's experience in the property reflects on your investment — we treat it that way.</p></div></div>
+        </div>
+
+        <details class="faq">
+            <summary><span class="tag">Costs</span><span class="q-text">Who pays for repairs — and do you need my approval every time?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Maintenance costs are the owner's responsibility unless the damage is clearly tenant-caused, in which case we pursue recovery through the deposit or lease remedies.</p>
+                <p>Approval works in tiers:</p>
+                <ul>
+                    <li><strong>Routine repairs:</strong> Handled and you're notified. We don't need your signature on a broken garbage disposal — waiting creates delays, vendor trip charges, and frustrated tenants.</li>
+                    <li><strong>Large-scale work</strong> (roof, HVAC replacement, major renovations): We get bids, present options, and proceed only with your authorization.</li>
+                    <li><strong>Emergencies:</strong> Handled immediately. Florida law requires it — we notify you as soon as possible, but we cannot wait for approval when safety or property integrity is at risk.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Costs</span><span class="q-text">How does the money move when a repair happens?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Repair costs are drawn from your <strong>$500 owner reserve</strong> and from rental proceeds as they come in. Most of the time, costs are simply deducted from your monthly rent before disbursement — no action needed from you at all.</p>
+                <p>If a repair requires funds beyond what's available in the reserve and current proceeds, we'll send you a request and you can pay directly through your owner portal online. This is uncommon, but the portal makes it straightforward when it happens.</p>
+                <p>Every vendor invoice appears as a clear line item on your monthly owner statement. Nothing is lumped together, nothing is unclear.</p>
+                <p>The reserve exists so a $120 plumbing call doesn't require a three-day approval process. It's your money, set aside for your property, and it keeps things moving for your tenant and for you.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Costs</span><span class="q-text">What's a realistic maintenance budget to plan for?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>A useful planning rule: budget roughly <strong>1% of your property's value per year</strong> for maintenance. On a $350,000 home, that's $3,500/year — about $290/month set aside mentally.</p>
+                <p>In reality, most months will see nothing significant. Occasionally a year includes a larger item — HVAC service, water heater replacement, exterior painting. The 1% rule smooths that out over time.</p>
+                <p>Our maintenance triage process is specifically designed to minimize unnecessary spend — troubleshooting before dispatching, batching small repairs, and using a vetted vendor network with fair, consistent pricing.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Inspections</span><span class="q-text">What inspections happen during the tenancy?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Documentation is non-negotiable at Verandah. Our team's performance is measured on it. Every inspection report belongs to you and is uploaded directly to your owner portal.</p>
+                <ul>
+                    <li><strong>Move-in inspection:</strong> Fully documented with photos before your tenant takes possession. This becomes your property's baseline — your record, stored in your portal and protected.</li>
+                    <li><strong>Interim inspections:</strong> Conducted while the tenant is in place to confirm the property is being maintained properly and to catch anything that needs attention early.</li>
+                    <li><strong>Risk mitigation inspections:</strong> Proactive inspections to identify and address any liability concerns before they become problems — fully documented with photos and a written report, uploaded to your portal.</li>
+                    <li><strong>Move-out inspection:</strong> Handled to the same standard as move-in. The direct comparison gives us the documentation needed to fairly and accurately apply any security deposit deductions beyond normal wear and tear.</li>
+                </ul>
+                <p>All reports are yours. They live in your portal, available to you any time.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- STAGE 7 -->
+<section class="stage-section" id="s7">
+    <div class="container">
+        <div class="stage-label">Stage 7</div>
+        <h2>Renewal, move-out, <em>and the cycle continues.</em></h2>
+        <p class="stage-intro">You've made it through the hardest part — finding and placing a great tenant. Now we work to keep them. A good, stable tenancy is worth protecting, and that's exactly what we do. When the time does come for a transition, we handle it cleanly so the cycle continues without disruption to you.</p>
+
+        <details class="faq">
+            <summary><span class="tag">Renewal</span><span class="q-text">How does lease renewal work?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>We start the renewal process about <strong>80 days before your lease expires</strong> — well ahead of the deadline, so there's no scramble. We pull current market data, make a clear recommendation, and handle the entire conversation with your tenant. You're kept informed throughout, and nothing moves without your awareness.</p>
+                <p>Our philosophy here is simple: a good tenant who pays on time, takes care of your home, and communicates well is genuinely worth keeping. We work hard to make renewal easy for residents we want to stay — and when renewal doesn't make sense, we're already quietly preparing for what comes next so there's no gap in momentum for you.</p>
+                <p>The renewal fee is <strong>$200 flat</strong> — no new leasing fee when your existing resident renews.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Move-out</span><span class="q-text">What happens when a tenant leaves?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>When a tenancy ends, we handle the entire process — from coordinating the move-out with your resident to completing the final inspection and closing out their account properly.</p>
+                <p>The move-out inspection is documented to the same standard as move-in — the direct comparison gives us everything we need to handle any deposit deductions fairly, accurately, and with full documentation to back it up.</p>
+                <p>The security deposit settlement process is handled in strict compliance with Florida Statute, which has very specific procedures and defined timelines. We follow them carefully — because how this is handled protects you legally and reflects on the integrity of how we manage on your behalf. Once it's closed, the cycle starts fresh, and we carry everything we've learned into the next placement.</p>
+            </div>
+        </details>
+
+        <details class="faq">
+            <summary><span class="tag">Move-out</span><span class="q-text">What if a tenant needs to leave before their lease is up?</span><span class="plus">+</span></summary>
+            <div class="faq-body">
+                <p>Our lease does not include a clause allowing tenants to simply break it. They are fully responsible for rent and lease obligations until they are replaced by a well-qualified tenant we've approved.</p>
+                <p>If a tenant needs to exit early, we manage that process — including finding a replacement and ensuring the financial exposure to you is minimized as much as possible. The tenant remains on the hook until a qualified replacement is in place.</p>
+            </div>
+        </details>
+    </div>
+</section>
+
+<!-- EVERYTHING INCLUDED -->
+<section class="everything-included">
+    <div class="container-wide">
+        <div class="icon-mark">✦</div>
+        <h2>Everything included with every Verandah-managed property.</h2>
+        <p class="lead">No add-ons, no tiers, no surprises. This is what every owner receives — because we believe you shouldn't have to wonder if you're getting the full service.</p>
+        <ul>
+            <li><strong>Landlord Shield Coverage (Year 1 free)</strong> — $35K malicious damage, $100K accidental damage, 25 weeks lost rent, eviction costs, $1M liability</li>
+            <li><strong>Animal Protection Guarantee</strong> — up to $1,500 pet damage beyond the deposit</li>
+            <li>Professional marketing photography, virtual tour, and floor plan</li>
+            <li>MLS listing with Realtor co-op — Verandah covers cooperating agent commission</li>
+            <li>Zillow, Realtor.com, and all major rental platforms</li>
+            <li>Multi-layer tenant screening — credit, income, fraud detection, background, rental history</li>
+            <li>Rently Smart Lockbox — verified self-showings with identity confirmation and instant alerts</li>
+            <li>After-hours emergency maintenance dispatch for your residents</li>
+            <li>Secure 24/7 owner portal — statements, invoices, deposits, inspection reports, documents</li>
+            <li>Experian tenant payment reporting — monthly accountability built in</li>
+            <li>Monthly detailed owner statements — every line item visible, CPA-overseen accounting</li>
+            <li>Electronic 1099 delivery annually through your owner portal</li>
+            <li>Marketing fee waived for your entire first year</li>
+            <li>New Client Liaison assigned — your single point of contact through your full first leasing cycle</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+    <div class="container">
+        <h2>Does renting <em>pencil out</em> for your property?</h2>
+        <p class="lead">Plug in your numbers. See a directional picture of what to expect in Year 1 and beyond.</p>
+        <div class="calculator">
+            <h3>Estimate your net rental income</h3>
+            <div class="calc-row">
+                <div class="calc-input">
+                    <label for="rent">Est. monthly rent ($)</label>
+                    <input type="number" id="rent" value="2200" min="0">
+                </div>
+                <div class="calc-input">
+                    <label for="mortgage">Monthly mortgage / PITI ($)</label>
+                    <input type="number" id="mortgage" value="1500" min="0">
+                </div>
+                <div class="calc-input">
+                    <label for="other">Other monthly costs ($)</label>
+                    <input type="number" id="other" value="250" min="0">
+                </div>
+            </div>
+            <div class="calc-result"><span class="label">Monthly mgmt fee (8%)</span><span class="value" id="r-mgmt">$176</span></div>
+            <div class="calc-result"><span class="label">Year 1 leasing fee (once)</span><span class="value" id="r-lease">$1,100</span></div>
+            <div class="calc-result headline"><span class="label">Est. monthly cash flow</span><span class="value" id="r-cashflow">$274/mo</span></div>
+            <div class="calc-result headline"><span class="label">Est. annual net (Year 2+)</span><span class="value" id="r-annual">$5,688</span></div>
+            <p class="calc-disclaimer">A simplified estimate. Does not include property taxes, insurance, HOA dues, or maintenance reserves. Use this as a directional starting point — a full picture requires a conversation about your specific property.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Let's have a real conversation <em>about your property.</em></h2>
+        <p>There's no pressure, no pitch. Just a straightforward conversation with Pamela or Megan about your situation, your property, and whether this is the right path for you right now. We'd rather give you an honest answer than a sales call.</p>
+        <a class="cta-button" href="tel:4074155478">Call or text Pamela → (407) 415-5478</a>
+    </div>
+</section>
+
+<footer class="report-footer">
+    <div class="container">
+        <div class="brand">Verandah Properties, LLC</div>
+        <div>4767 New Broad St., Orlando, FL 32812</div>
+        <div>Office: <a href="tel:4078550331">407-855-0331</a></div>
+        <div><a href="https://www.verandahproperties.com">verandahproperties.com</a></div>
+        <div class="disclaimer">This document is an informational overview only and does not constitute a management agreement or legal advice. Fees and terms subject to the executed Exclusive Rental Management Agreement.</div>
+    </div>
+</footer>
+
+<script>
+function fmtUSD(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+}
+function recalc() {
+    const rent = parseFloat(document.getElementById('rent').value) || 0;
+    const mortgage = parseFloat(document.getElementById('mortgage').value) || 0;
+    const other = parseFloat(document.getElementById('other').value) || 0;
+    const mgmtFee = rent * 0.08;
+    const leasingFee = rent * 0.50;
+    const monthlyCashFlow = rent - mortgage - other - mgmtFee;
+    const annualNet = (monthlyCashFlow * 12);
+    document.getElementById('r-mgmt').textContent = fmtUSD(mgmtFee);
+    document.getElementById('r-lease').textContent = fmtUSD(leasingFee);
+    document.getElementById('r-cashflow').textContent = fmtUSD(monthlyCashFlow) + '/mo';
+    document.getElementById('r-annual').textContent = fmtUSD(annualNet);
+}
+['rent','mortgage','other'].forEach(id => {
+    document.getElementById(id).addEventListener('input', recalc);
+});
+recalc();
+</script>
+
+</body>
+</html>
